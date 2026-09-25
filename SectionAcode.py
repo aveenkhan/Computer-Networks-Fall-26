@@ -6,7 +6,6 @@ DNS_PORT = 53
 TIMEOUT = 5
 
 def encode_domain_name(domain):
-    """Convert a domain name into DNS label format."""
 
     domain = domain.strip().rstrip(".")
 
@@ -39,10 +38,6 @@ def encode_domain_name(domain):
 
 
 def read_domain_name(data, offset):
-    """
-    Read a DNS domain name.
-    Handles normal labels and RFC 1035 compression pointers.
-    """
 
     labels = []
     original_offset = offset
